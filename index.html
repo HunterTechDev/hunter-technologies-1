@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunter Technologies</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Orbitron", sans-serif;
+      }
+
+      body {
+        background: #050505;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* Animated Background */
+
+      .background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 255, 255, 0.15),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 150, 255, 0.15),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 50% 80%,
+            rgba(0, 255, 255, 0.15),
+            transparent 30%
+          );
+      }
+
+      header {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        color: #00ffff;
+        text-shadow:
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #00ffff;
+        margin-bottom: 20px;
+      }
+
+      .typing {
+        color: #ffffff;
+        font-size: 1.2rem;
+        border-right: 3px solid #00ffff;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        min-height: 35px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 35px;
+        color: #00ffff;
+        text-decoration: none;
+        border: 2px solid #00ffff;
+        border-radius: 50px;
+        transition: 0.4s;
+      }
+
+      .btn:hover {
+        background: #00ffff;
+        color: #000;
+        box-shadow: 0 0 20px #00ffff;
+      }
+
+      section {
+        padding: 80px 10%;
+      }
+
+      .title {
+        text-align: center;
+        color: #00ffff;
+        margin-bottom: 40px;
+        font-size: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        padding: 25px;
+        border-radius: 15px;
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 25px #00ffff;
+      }
+
+      .card h3 {
+        color: #00ffff;
+        margin-bottom: 10px;
+      }
+
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .price {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        padding: 30px;
+        border-radius: 15px;
+        transition: 0.4s;
+      }
+
+      .price:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #00ffff;
+      }
+
+      .price h2 {
+        color: #00ffff;
+        margin: 15px 0;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #00ffff;
+      }
+
+      /* Floating Particles */
+
+      .particle {
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        background: #00ffff;
+        border-radius: 50%;
+        animation: float 12s linear infinite;
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .typing {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <script>
+      for (let i = 0; i < 50; i++) {
+        let p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "%";
+        p.style.animationDelay = Math.random() * 10 + "s";
+        p.style.animationDuration = 8 + Math.random() * 10 + "s";
+        document.body.appendChild(p);
+      }
+    </script>
+
+    <header>
+      <div class="hero">
+        <h1>HUNTER TECHNOLOGIES</h1>
+
+        <p class="typing"></p>
+
+        <br />
+
+        <a href="https://wa.me/255767842812" class="btn" target="_blank">
+          CONTACT ON WHATSAPP
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="title">OUR SERVICES</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Website Development</h3>
+          <p>Professional business and personal websites.</p>
+        </div>
+
+        <div class="card">
+          <h3>E-Commerce Stores</h3>
+          <p>Sell products and services online 24/7.</p>
+        </div>
+
+        <div class="card">
+          <h3>Website Hosting</h3>
+          <p>Reliable and secure hosting solutions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Digital Advertising</h3>
+          <p>Reach thousands of customers online.</p>
+        </div>
+
+        <div class="card">
+          <h3>Hunter AI</h3>
+          <p>Custom AI assistants for businesses.</p>
+        </div>
+
+        <div class="card">
+          <h3>Maintenance</h3>
+          <p>Continuous support and website updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">WEBSITE PACKAGES</h2>
+
+      <div class="pricing">
+        <div class="price">
+          <h3>Basic Website</h3>
+          <h2>TZS 150,000</h2>
+          <p>Professional Business Website</p>
+        </div>
+
+        <div class="price">
+          <h3>Business Pro</h3>
+          <h2>TZS 350,000</h2>
+          <p>Advanced Features & SEO</p>
+        </div>
+
+        <div class="price">
+          <h3>E-Commerce</h3>
+          <h2>TZS 700,000+</h2>
+          <p>Online Store & Payment Integration</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2 class="title">CONTACT US</h2>
+
+      <p>Ready to take your business online?</p>
+
+      <br />
+
+      <a href="https://wa.me/255767842812" class="btn" target="_blank">
+        +255 767 842 812
+      </a>
+    </section>
+
+    <footer>© 2026 Hunter Technologies | Future Powered Solutions</footer>
+
+    <script>
+      const messages = [
+        "Building The Future Through Technology",
+        "Professional Website Development",
+        "24/7 Website Hosting Services",
+        "Digital Advertising Solutions",
+        "Hunter AI Smart Assistant",
+        "WhatsApp: +255 767 842 812",
+      ];
+
+      let msgIndex = 0;
+      let charIndex = 0;
+
+      const typingElement = document.querySelector(".typing");
+
+      function typeText() {
+        if (charIndex < messages[msgIndex].length) {
+          typingElement.textContent += messages[msgIndex].charAt(charIndex);
+
+          charIndex++;
+
+          setTimeout(typeText, 60);
+        } else {
+          setTimeout(eraseText, 2000);
+        }
+      }
+
+      function eraseText() {
+        if (typingElement.textContent.length > 0) {
+          typingElement.textContent = typingElement.textContent.slice(0, -1);
+
+          setTimeout(eraseText, 30);
+        } else {
+          msgIndex = (msgIndex + 1) % messages.length;
+
+          charIndex = 0;
+
+          setTimeout(typeText, 500);
+        }
+      }
+
+      typeText();
+    </script>
+  </body>
+</html>
